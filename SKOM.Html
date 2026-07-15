@@ -1,0 +1,2330 @@
+<!doctype html>
+<html lang="id">
+ <head><script>window["__codeletBootstrap__"]=JSON.parse('{"A":"A","B":"20260715-05-d05fd84"}');</script><script src="/_sdk/f432b76fb310b513.telemetry_sdk.js" integrity="sha512-9FJQ55EKmmqhyyik8BhrMVfm0+iYYfb8uOlRsjtkxJMEI97qOVEI4PnHohDjQAtvAep0IOEpdQ64eki0sz62ug=="></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, maximum-scale=5.0, user-scalable=yes">
+  <meta name="theme-color" content="#667eea">
+  <meta name="description" content="E-Modul Sistem Komputer Kelas X TSM - Platform pembelajaran interaktif dengan materi, video, dan quiz">
+  <title>E-Modul Sistem Komputer</title>
+  <script src="/_sdk/8650958800d6c92a.element_sdk.js" integrity="sha512-zFMhEG5W24TdVhhc4yw+K4kKrl6mClLz7Nz7OlZcKY64bZTx26LpVI6mwMCarQMzfrHe8i4fBMu4fxoFej2m9g=="></script>
+  <style>
+    body {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #d8c9f0 0%, #b8e1f0 100%);
+      min-height: 100vh;
+      min-width: 100%;
+      border: 0;
+      overflow-x: hidden;
+    }
+    
+    * {
+      box-sizing: border-box;
+    }
+
+    .container {
+      width: 100%;
+      min-height: 100vh;
+      background: transparent;
+      overflow: hidden;
+      max-width: 100vw;
+      position: relative;
+      border: 0;
+      margin: 0;
+      padding: 0;
+    }
+
+    html, body {
+      overflow-x: hidden;
+      width: 100%;
+      max-width: 100%;
+      margin: 0;
+      padding: 0;
+      position: relative;
+      border: 0;
+    }
+    
+    html {
+      overflow-y: scroll;
+      scrollbar-width: none;
+      height: 100%;
+    }
+    
+    html::-webkit-scrollbar {
+      display: none;
+      width: 0;
+      height: 0;
+    }
+    
+    body::-webkit-scrollbar {
+      width: 0px;
+      height: 0px;
+      display: none;
+    }
+    
+    body::-webkit-scrollbar-track {
+      background: transparent;
+    }
+    
+    body::-webkit-scrollbar-thumb {
+      background: transparent;
+      border-radius: 5px;
+    }
+    
+    body::-webkit-scrollbar-thumb:hover {
+      background: transparent;
+    }
+
+    .container::-webkit-scrollbar {
+      display: none;
+      width: 0;
+      height: 0;
+    }
+
+    .container::-webkit-scrollbar-track {
+      background: transparent;
+    }
+
+    .container::-webkit-scrollbar-thumb {
+      background: transparent;
+    }
+    
+    .container::-webkit-scrollbar {
+      display: none;
+      width: 0;
+      height: 0;
+    }
+
+    /* Login Page Styles */
+    .login-page {
+      width: 100%;
+      min-height: 100vh;
+      background: linear-gradient(135deg, #d8c9f0 0%, #b8e1f0 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 1rem;
+      animation: fadeIn 0.5s ease-in;
+      position: relative;
+      overflow: hidden;
+      border: 0;
+      box-shadow: none;
+    }
+
+    .login-page::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      right: -15%;
+      width: 480px;
+      height: 480px;
+      background: radial-gradient(circle, rgba(240, 147, 251, 0.12) 0%, transparent 72%);
+      border-radius: 50%;
+      animation: float 6s ease-in-out infinite;
+      pointer-events: none;
+      z-index: 0;
+      display: none;
+    }
+
+    .login-page::after {
+      content: '';
+      position: absolute;
+      bottom: -30%;
+      left: -10%;
+      width: 360px;
+      height: 360px;
+      background: radial-gradient(circle, rgba(102, 126, 234, 0.10) 0%, transparent 72%);
+      border-radius: 50%;
+      animation: float 8s ease-in-out infinite reverse;
+      pointer-events: none;
+      z-index: 0;
+      display: none;
+    }
+
+    @keyframes float {
+      0%, 100% {
+        transform: translateY(0px);
+      }
+      50% {
+        transform: translateY(30px);
+      }
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .login-container {
+      background: white;
+      border-radius: 15px;
+      padding: 3rem 2rem;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+      width: 100%;
+      max-width: 420px;
+      animation: slideUp 0.6s ease-out;
+      position: relative;
+      z-index: 10;
+      border: 0;
+      outline: none;
+    }
+
+    @keyframes slideUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .login-header {
+      text-align: center;
+      margin-bottom: 2.5rem;
+    }
+
+    .login-logo {
+      width: 180px;
+      height: 180px;
+      margin: 0 auto 0.8rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 4rem;
+      animation: bounce 0.6s ease-out;
+      overflow: visible;
+      padding: 0;
+    }
+    
+    .login-logo img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      object-position: center;
+    }
+
+    @keyframes bounce {
+      0% {
+        transform: translateY(-20px) scale(0.8);
+        opacity: 0;
+      }
+      50% {
+        transform: translateY(10px) scale(1.05);
+      }
+      100% {
+        transform: translateY(0) scale(1);
+        opacity: 1;
+      }
+    }
+
+    @keyframes glow {
+      0%, 100% {
+        box-shadow: 0 10px 30px rgba(102, 126, 234, 0.4);
+      }
+      50% {
+        box-shadow: 0 10px 40px rgba(79, 172, 254, 0.7);
+      }
+    }
+
+    .login-header h1 {
+      color: #333;
+      font-size: 1.8rem;
+      margin: 0.5rem 0;
+      font-weight: 700;
+      letter-spacing: -0.5px;
+    }
+
+    .login-header p {
+      color: #666;
+      font-size: 0.95rem;
+      margin: 0.5rem 0 0 0;
+    }
+
+    .login-form {
+      display: flex;
+      flex-direction: column;
+      gap: 1.2rem;
+    }
+
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+
+    .form-group label {
+      color: #333;
+      font-weight: 600;
+      font-size: 0.95rem;
+    }
+
+    .form-group input {
+      padding: 0.8rem 1rem;
+      border: 2px solid #e0e0e0;
+      border-radius: 8px;
+      font-size: 1rem;
+      transition: all 0.3s ease;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    .form-group input:focus {
+      outline: none;
+      border-color: #667eea;
+      box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+      background-color: #f8f9ff;
+    }
+
+    .form-group input::placeholder {
+      color: #999;
+    }
+
+    .login-btn {
+      padding: 0.95rem 1.5rem;
+      background: linear-gradient(90deg, #7c3aed 0%, #6366f1 25%, #ec4899 50%, #6366f1 75%, #7c3aed 100%);
+      background-size: 200% 100%;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-size: 1.05rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+      box-shadow: 0 8px 20px rgba(124, 58, 237, 0.5), 
+                  0 2px 5px rgba(0, 0, 0, 0.1);
+      margin-top: 0.5rem;
+      position: relative;
+      overflow: hidden;
+      animation: colorShift 3s ease-in-out infinite;
+    }
+
+    @keyframes colorShift {
+      0% {
+        background-position: 0% center;
+      }
+      50% {
+        background-position: 100% center;
+      }
+      100% {
+        background-position: 0% center;
+      }
+    }
+
+    .login-btn::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 0;
+      height: 0;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.3);
+      transform: translate(-50%, -50%);
+      transition: width 0.6s, height 0.6s;
+    }
+
+    .login-btn:hover {
+      transform: translateY(-6px) scale(1.02);
+      box-shadow: 0 16px 40px rgba(124, 58, 237, 0.7),
+                  0 0 20px rgba(99, 102, 241, 0.4),
+                  inset 0 -2px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .login-btn:active {
+      transform: translateY(-3px) scale(0.98);
+      box-shadow: 0 12px 30px rgba(124, 58, 237, 0.6),
+                  inset 0 2px 4px rgba(0, 0, 0, 0.2);
+    }
+
+    .login-btn:active::before {
+      width: 300px;
+      height: 300px;
+    }
+
+    .login-btn:disabled {
+      background: #ccc;
+      cursor: not-allowed;
+      transform: none;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .login-error {
+      color: #f44336;
+      background: #ffebee;
+      padding: 0.8rem 1rem;
+      border-radius: 6px;
+      font-size: 0.9rem;
+      text-align: center;
+      border-left: 4px solid #f44336;
+      display: none;
+      animation: shake 0.5s ease;
+    }
+
+    .login-error.show {
+      display: block;
+    }
+
+    @keyframes shake {
+      0%, 100% { transform: translateX(0); }
+      25% { transform: translateX(-10px); }
+      75% { transform: translateX(10px); }
+    }
+
+    .login-footer {
+      margin-top: 2rem;
+      padding-top: 0;
+      text-align: center;
+      font-size: 0.85rem;
+      color: #7a6b93;
+      border-top: none;
+      border: 0;
+      box-shadow: none;
+      background: transparent;
+    }
+
+    .login-footer p {
+      margin: 0.4rem 0;
+      line-height: 1.5;
+      color: #7a6b93;
+    }
+
+    .login-footer strong {
+      color: #6c5aa8;
+      font-weight: 600;
+    }
+
+    .emodul-content {
+      width: 100%;
+    }
+
+    /* Header & Navigation */
+    header {
+      background: url('https://i.imgur.com/6eWSNni.png') center/cover;
+      background-color: #667eea;
+      padding: 1rem 2rem;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      width: 100%;
+      box-sizing: border-box;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .logo {
+      color: white;
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 2rem;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    .nav-links a {
+      color: white;
+      text-decoration: none;
+      font-weight: 600;
+      transition: all 0.3s ease;
+      cursor: pointer;
+      padding: 0.6rem 1.2rem;
+      border-radius: 8px;
+      background: rgba(255, 255, 255, 0.1);
+      border: 2px solid rgba(255, 255, 255, 0.2);
+      display: inline-block;
+    }
+
+    .nav-links a:hover {
+      background: rgba(255, 255, 255, 0.2);
+      border-color: rgba(255, 255, 255, 0.4);
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    }
+
+    .nav-links a:active {
+      transform: translateY(0px);
+      box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.2);
+    }
+
+    /* Main Content */
+    .content {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 2rem;
+    }
+
+    .section {
+      display: none;
+      animation: fadeIn 0.5s;
+    }
+
+    .section.active {
+      display: block;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Section Header Boxes */
+    .section-header-box {
+      background: linear-gradient(135deg, #d8c9f0 0%, #b8e1f0 100%);
+      border-radius: 15px;
+      padding: 2rem;
+      margin-bottom: 2rem;
+      box-shadow: 0 8px 25px rgba(102, 126, 234, 0.3);
+      text-align: center;
+      animation: slideDown 0.5s ease-out;
+    }
+
+    .section-header-box h1 {
+      color: white;
+      font-size: 2.2rem;
+      margin: 0;
+      font-weight: 800;
+      letter-spacing: 0.5px;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    }
+
+    @keyframes slideDown {
+      from {
+        opacity: 0;
+        transform: translateY(-20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* Beranda */
+    .hero {
+      text-align: center;
+      padding: 3rem 1rem;
+      background: url('https://i.imgur.com/XN8k99R.png') center/cover;
+      background-color: #d8c9f0;
+      border-radius: 15px;
+      color: white;
+      margin-bottom: 2rem;
+    }
+
+    .hero h1 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+      font-weight: 800;
+      letter-spacing: -0.5px;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      opacity: 0.95;
+      font-weight: 500;
+      line-height: 1.6;
+      letter-spacing: 0.3px;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+
+    .card {
+      background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+      border-radius: 10px;
+      padding: 2rem;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+    }
+
+    .card-icon {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+    }
+
+    .card h3 {
+      color: #667eea;
+      margin-bottom: 1rem;
+    }
+
+    /* Materi Section */
+    .materi-container {
+      display: grid;
+      gap: 2rem;
+    }
+
+    .materi-item {
+      background: linear-gradient(135deg, #e9d5ff 0%, #bfdbfe 100%);
+      border-radius: 10px;
+      padding: 2rem;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
+
+    .materi-item h2 {
+      color: #667eea;
+      margin-bottom: 1.5rem;
+      border-bottom: 3px solid #667eea;
+      padding-bottom: 0.5rem;
+    }
+
+    .materi-content {
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      gap: 2rem;
+      margin-top: 1rem;
+    }
+
+    .materi-image {
+      width: 100%;
+      height: 200px;
+      background: linear-gradient(135deg, #667eea 0%, #4facfe 100%);
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 4rem;
+    }
+
+    .materi-text {
+      line-height: 1.8;
+      color: #333;
+    }
+
+    .materi-text h4 {
+      color: #4facfe;
+      margin-top: 1rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .materi-text ul {
+      margin-left: 1.5rem;
+    }
+
+    /* Video Section */
+    .video-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+    }
+
+    .video-card {
+      background: linear-gradient(135deg, #fce7f3 0%, #ddd6fe 100%);
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      transition: transform 0.3s;
+    }
+
+    .video-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .video-thumbnail {
+      width: 100%;
+      height: 200px;
+      background: linear-gradient(135deg, #667eea 0%, #4facfe 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 3rem;
+      color: white;
+    }
+
+    .video-info {
+      padding: 1.5rem;
+    }
+
+    .video-info h3 {
+      color: #667eea;
+      margin-bottom: 0.5rem;
+    }
+
+    .video-link {
+      display: inline-block;
+      margin-top: 1rem;
+      padding: 0.5rem 1.5rem;
+      background: #667eea;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+      transition: background 0.3s;
+    }
+
+    .video-link:hover {
+      background: #4facfe;
+    }
+
+    /* Quiz Section */
+    .quiz-container {
+      background: linear-gradient(135deg, #ececec 0%, #d9d9d9 100%);
+      border-radius: 10px;
+      padding: 2rem;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
+
+    .quiz-question {
+      margin-bottom: 2rem;
+      padding: 1.5rem;
+      background: #f5f5f5;
+      border-radius: 8px;
+      border-left: 4px solid #667eea;
+    }
+
+    .quiz-question h3 {
+      color: #667eea;
+      margin-bottom: 1rem;
+    }
+
+    .quiz-options {
+      display: flex;
+      flex-direction: column;
+      gap: 0.8rem;
+    }
+
+    .quiz-option {
+      padding: 1rem;
+      background: white;
+      border: 2px solid #e0e0e0;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: all 0.3s;
+    }
+
+    .quiz-option:hover {
+      border-color: #667eea;
+      background: #f0f4ff;
+    }
+
+    .quiz-option.selected {
+      border-color: #667eea;
+      background: #f0f4ff;
+    }
+
+    .quiz-option.correct {
+      border-color: #4caf50;
+      background: #e8f5e9;
+    }
+
+    .quiz-option.incorrect {
+      border-color: #f44336;
+      background: #ffebee;
+    }
+
+    .quiz-submit {
+      margin-top: 2rem;
+      padding: 1rem 2rem;
+      background: #667eea;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .quiz-submit:hover {
+      background: #4facfe;
+    }
+
+    .quiz-submit:disabled {
+      background: #ccc;
+      cursor: not-allowed;
+    }
+
+    .quiz-result {
+      margin-top: 2rem;
+      padding: 1.5rem;
+      background: #f0f4ff;
+      border-radius: 8px;
+      text-align: center;
+      display: none;
+    }
+
+    .quiz-result.show {
+      display: block;
+    }
+
+    .quiz-result h3 {
+      color: #667eea;
+      margin-bottom: 0.5rem;
+    }
+
+    .quiz-reset {
+      margin-top: 1rem;
+      padding: 0.8rem 1.5rem;
+      background: #4facfe;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .quiz-reset:hover {
+      background: #667eea;
+    }
+
+    /* Navigation Button Styles */
+    .nav-button {
+      padding: 1rem 3rem;
+      background: linear-gradient(135deg, #667eea 0%, #4facfe 100%);
+      color: white;
+      border: none;
+      border-radius: 50px;
+      font-size: 1.1rem;
+      font-weight: 600;
+      cursor: pointer;
+      box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+      transition: all 0.3s;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    .nav-button:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 25px rgba(102, 126, 234, 0.7);
+      background: linear-gradient(135deg, #4facfe 0%, #667eea 100%);
+    }
+
+    .nav-button:active {
+      transform: translateY(-2px);
+      box-shadow: 0 5px 18px rgba(102, 126, 234, 0.5);
+    }
+
+    /* Profil Section */
+    .profil-container {
+      background: url('https://imgur.com/Nx8CsY3.png') center/cover;
+      background-color: #667eea;
+      border-radius: 15px;
+      padding: 3rem 2rem;
+      box-shadow: 0 8px 25px rgba(102, 126, 234, 0.3);
+      text-align: center;
+      margin: 0 auto;
+      max-width: 600px;
+      width: 100%;
+      box-sizing: border-box;
+      margin-top: 2rem;
+    }
+
+    .profil-photo {
+      width: 150px;
+      height: 150px;
+      margin: 0 auto 1.5rem;
+      background: linear-gradient(135deg, #667eea 0%, #4facfe 100%);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 4rem;
+      color: white;
+      overflow: hidden;
+      border: 4px solid #667eea;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    }
+
+    .profil-photo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+
+    .profil-info h2 {
+      color: white;
+      margin-bottom: 0.5rem;
+      font-family: 'Poppins', 'Segoe UI', sans-serif;
+      font-weight: 700;
+      font-size: 2rem;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+    }
+
+    .profil-info p {
+      color: white;
+      line-height: 1.8;
+      margin-top: 1rem;
+      font-family: 'Poppins', 'Segoe UI', sans-serif;
+      font-weight: 400;
+      font-size: 1.1rem;
+      text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+    }
+
+    .profil-info p strong {
+      font-weight: 600;
+      color: #fff;
+    }
+
+    /* Footer */
+    footer {
+      background: transparent;
+      color: #6c5aa8;
+      text-align: center;
+      padding: 1rem 2rem 2rem;
+      margin-top: 0;
+      width: 100%;
+      box-sizing: border-box;
+      border: 0;
+      box-shadow: none;
+      text-shadow: none;
+    }
+
+    footer p {
+      color: inherit;
+      margin: 0;
+      line-height: 1.5;
+      text-shadow: none;
+    }
+
+    /* Responsive */
+    @media (max-width: 1024px) {
+      nav {
+        flex-direction: column;
+        gap: 1rem;
+      }
+
+      .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
+      .content {
+        padding: 1.5rem;
+      }
+
+      .materi-content {
+        grid-template-columns: 1fr;
+      }
+
+      .video-grid {
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      }
+    }
+
+    @media (max-width: 768px) {
+      header {
+        padding: 1rem;
+      }
+
+      nav {
+        flex-direction: column;
+        gap: 0.5rem;
+      }
+
+      .logo {
+        font-size: 1.2rem;
+      }
+
+      .nav-links {
+        gap: 0.8rem;
+        font-size: 0.85rem;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
+      .nav-links a {
+        padding: 0.5rem 1rem;
+        background: rgba(255,255,255,0.1);
+        border-radius: 20px;
+        transition: all 0.3s;
+      }
+
+      .nav-links a:hover {
+        background: rgba(255,255,255,0.2);
+      }
+
+      .content {
+        padding: 1rem;
+        max-width: 100%;
+      }
+
+      .hero h1 {
+        font-size: 1.6rem;
+      }
+
+      .hero p {
+        font-size: 1rem;
+      }
+
+      .materi-content {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+      }
+
+      .materi-image {
+        height: 150px;
+      }
+
+      .materi-text {
+        font-size: 0.95rem;
+      }
+
+      .cards {
+        grid-template-columns: 1fr;
+      }
+
+      .video-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .section-header-box {
+        padding: 1.5rem;
+        border-radius: 12px;
+      }
+
+      .section-header-box h1 {
+        font-size: 1.6rem;
+      }
+
+      .login-container {
+        padding: 2rem 1.5rem;
+        border-radius: 12px;
+        max-width: 95%;
+      }
+
+      .login-header h1 {
+        font-size: 1.5rem;
+      }
+
+      .login-logo {
+        width: 120px;
+        height: 120px;
+        font-size: 3rem;
+      }
+
+      .login-form {
+        gap: 1rem;
+      }
+
+      .quiz-question {
+        padding: 1rem;
+      }
+
+      .quiz-question h3 {
+        font-size: 1rem;
+      }
+
+      .nav-button {
+        padding: 0.85rem 2rem;
+        font-size: 1rem;
+      }
+
+      .profil-container {
+        padding: 2rem 1.5rem;
+      }
+
+      .profil-info h2 {
+        font-size: 1.6rem;
+      }
+
+      .profil-info p {
+        font-size: 1rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      header {
+        padding: 0.8rem;
+      }
+
+      .logo {
+        font-size: 1rem;
+      }
+
+      nav {
+        gap: 0.3rem;
+      }
+
+      .nav-links {
+        gap: 0.5rem;
+        font-size: 0.75rem;
+      }
+
+      .nav-links a {
+        padding: 0.4rem 0.8rem;
+      }
+
+      .content {
+        padding: 0.8rem;
+      }
+
+      .hero {
+        padding: 1.5rem 1rem;
+      }
+
+      .hero h1 {
+        font-size: 1.3rem;
+        margin-bottom: 0.8rem;
+      }
+
+      .hero p {
+        font-size: 0.9rem;
+        line-height: 1.5;
+      }
+
+      .section-header-box {
+        padding: 1.2rem;
+        margin-bottom: 1.5rem;
+        border-radius: 10px;
+      }
+
+      .section-header-box h1 {
+        font-size: 1.3rem;
+      }
+
+      .materi-item {
+        padding: 1.5rem 1rem;
+      }
+
+      .materi-item h2 {
+        font-size: 1.1rem;
+        margin-bottom: 1rem;
+      }
+
+      .materi-content {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+      }
+
+      .materi-image {
+        height: 120px;
+      }
+
+      .materi-text {
+        font-size: 0.9rem;
+        line-height: 1.6;
+      }
+
+      .materi-text h4 {
+        font-size: 0.95rem;
+        margin-top: 0.8rem;
+      }
+
+      .materi-text ul {
+        margin-left: 1.2rem;
+        font-size: 0.9rem;
+      }
+
+      .video-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+      }
+
+      .video-card {
+        border-radius: 8px;
+      }
+
+      .video-thumbnail {
+        height: 150px;
+      }
+
+      .video-info {
+        padding: 1rem;
+      }
+
+      .video-info h3 {
+        font-size: 1rem;
+        margin-bottom: 0.5rem;
+      }
+
+      .video-info p {
+        font-size: 0.85rem;
+      }
+
+      .video-link {
+        padding: 0.4rem 1rem;
+        font-size: 0.85rem;
+      }
+
+      .quiz-container {
+        padding: 1.5rem 1rem;
+      }
+
+      .quiz-question {
+        padding: 1rem 0.8rem;
+        margin-bottom: 1.5rem;
+      }
+
+      .quiz-question h3 {
+        font-size: 0.95rem;
+        margin-bottom: 0.8rem;
+      }
+
+      .quiz-options {
+        gap: 0.6rem;
+      }
+
+      .quiz-option {
+        padding: 0.8rem;
+        font-size: 0.9rem;
+      }
+
+      .quiz-submit {
+        padding: 0.8rem 1.5rem;
+        font-size: 0.95rem;
+        margin-top: 1.5rem;
+      }
+
+      .quiz-reset {
+        padding: 0.7rem 1.2rem;
+        font-size: 0.9rem;
+      }
+
+      .quiz-result {
+        padding: 1.2rem;
+        margin-top: 1.5rem;
+      }
+
+      .quiz-result h3 {
+        font-size: 1.1rem;
+        margin-bottom: 0.5rem;
+      }
+
+      .login-container {
+        padding: 1.5rem 1rem;
+        max-width: 95%;
+        border-radius: 12px;
+      }
+
+      .login-header {
+        margin-bottom: 1.5rem;
+      }
+
+      .login-header h1 {
+        font-size: 1.2rem;
+        margin: 0.5rem 0;
+      }
+
+      .login-header p {
+        font-size: 0.85rem;
+      }
+
+      .login-logo {
+        width: 100px;
+        height: 100px;
+        font-size: 2rem;
+        margin-bottom: 0.8rem;
+      }
+
+      .form-group {
+        gap: 0.4rem;
+      }
+
+      .form-group label {
+        font-size: 0.85rem;
+      }
+
+      .form-group input {
+        padding: 0.7rem 0.8rem;
+        font-size: 16px;
+        border-radius: 6px;
+      }
+
+      .login-btn {
+        padding: 0.8rem 1.2rem;
+        font-size: 0.95rem;
+        margin-top: 0.5rem;
+      }
+
+      .login-footer {
+        margin-top: 1.5rem;
+        padding-top: 1rem;
+        font-size: 0.75rem;
+      }
+
+      .login-footer p {
+        margin: 0.3rem 0;
+      }
+
+      .nav-button {
+        padding: 0.75rem 1.5rem;
+        font-size: 0.9rem;
+      }
+
+      .profil-container {
+        padding: 1.5rem 1rem;
+        margin: 1rem auto;
+      }
+
+      .profil-photo {
+        width: 120px;
+        height: 120px;
+        font-size: 3rem;
+      }
+
+      .profil-info h2 {
+        font-size: 1.4rem;
+        margin-bottom: 0.5rem;
+      }
+
+      .profil-info p {
+        font-size: 0.9rem;
+        margin-top: 0.8rem;
+      }
+
+      footer {
+        padding: 1.5rem 1rem;
+        font-size: 0.8rem;
+      }
+    }
+
+    @media (max-width: 360px) {
+      .logo {
+        font-size: 0.9rem;
+      }
+
+      .nav-links {
+        font-size: 0.65rem;
+        gap: 0.3rem;
+      }
+
+      .nav-links a {
+        padding: 0.3rem 0.6rem;
+      }
+
+      .hero h1 {
+        font-size: 1.1rem;
+      }
+
+      .materi-item h2 {
+        font-size: 1rem;
+      }
+
+      .quiz-question h3 {
+        font-size: 0.9rem;
+      }
+
+      .login-header h1 {
+        font-size: 1.1rem;
+      }
+
+      .profil-info h2 {
+        font-size: 1.2rem;
+      }
+    }
+  </style>
+  <script src="https://cdn.tailwindcss.com/3.4.17" type="text/javascript"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lucide@0.263.0/dist/umd/lucide.min.js" type="text/javascript"></script>
+  <script src="/_sdk/e3937a0574eb2d69.data_sdk.js" type="text/javascript" integrity="sha512-xbp/ACqEQy1aDxYMtXTrR3y5MUbzxuggRR/9sD48Gl4VhLMMCiAHsxMaFV6DTdeBpR6ymF+t2zhPKYkWM3+Jfw=="></script>
+ </head>
+ <body>
+  <div class="container" id="mainContainer">
+   <!-- Login Section -->
+   <div id="loginPage" class="login-page">
+    <div class="login-container">
+     <div class="login-header">
+      <div class="login-logo"><img src="https://imgur.com/aa7Trbr.png" alt="Logo Sistem Komputer" style="width: 110%; height: 110%; object-fit: contain; object-position: center;">
+      </div>
+      <h1>E-Modul Sistem Komputer</h1>
+      <p>Kelas X TSM - Sistem Komputer</p>
+     </div>
+     <form class="login-form" onsubmit="handleLogin(event)">
+      <div class="form-group">
+       <label for="username">Nama Pengguna / NIS</label> <input type="text" id="username" name="username" placeholder="Masukkan nama atau NIS Anda" required>
+      </div><button type="submit" class="login-btn">Masuk</button>
+      <div id="loginError" class="login-error"></div>
+     </form>
+     <div class="login-footer">
+      <p style="font-size: 1rem; font-weight: 600; color: #667eea; margin-bottom: 0.5rem;">🎓 Selamat Datang Siswa X TSM!</p>
+      <p style="font-size: 0.8rem; margin-top: 0.8rem; font-style: italic;">Cukup masukkan nama Anda untuk melanjutkan</p>
+     </div>
+    </div>
+   </div><!-- E-Modul Content Section -->
+   <div id="emodelContent" class="emodul-content" style="display: none;">
+    <header>
+     <nav>
+      <div class="logo" id="siteTitle">
+       E-Modul Sistem Komputer
+      </div>
+      <ul class="nav-links">
+       <li><a onclick="showSection('beranda')">Beranda</a></li>
+       <li><a onclick="showSection('materi')">Materi</a></li>
+       <li><a onclick="showSection('video')">Video Pembelajaran</a></li>
+       <li><a onclick="showSection('quiz')">Quiz</a></li>
+       <li><a onclick="showSection('profil')">Profil</a></li>
+      </ul>
+     </nav>
+    </header>
+    <div class="content"><!-- Beranda Section -->
+     <section id="beranda" class="section active">
+      <div class="hero">
+       <h1>Selamat Datang di E-Modul Sistem Komputer</h1>
+       <p id="welcomeText">Pelajari tentang Hardware, Software, Brainware, Sistem Operasi, Mekanisme Kerja Internal Komputer, Interaksi Komputer dan Pengguna dengan cara yang menyenangkan!</p>
+      </div>
+      <div style="background: linear-gradient(135deg, #3f4d8f 0%, #6a5bc0 45%, #8c7bd6 100%); border-radius: 10px; padding: 2rem; margin-bottom: 2rem; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+       <h2 style="color: #ffffff; margin-bottom: 1.5rem; text-align: center; font-weight: 900; font-size: 1.5rem; letter-spacing: 0.5px; text-shadow: 2px 2px 4px rgba(0,0,0,0.35);">📚 Pendahuluan E-Modul Sistem Komputer</h2>
+       <p style="line-height: 1.8; color: #f7f7f7; text-align: justify; margin-bottom: 1.5rem;">Selamat datang di E-Modul Sistem Komputer! Modul pembelajaran ini dirancang untuk membantu Anda memahami komponen-komponen penting dalam sistem komputer secara menyeluruh. Mari kita pelajari enam topik utama yang akan dibahas:</p>
+       <div style="background: linear-gradient(135deg, #46578c 0%, #5f52a8 50%, #8b73cf 100%); border-radius: 8px; padding: 2rem; margin-bottom: 1.5rem; border-left: 4px solid #d9d8ff; box-shadow: 0 4px 12px rgba(0,0,0,0.25);">
+        <h3 style="color: #ffffff; margin-bottom: 1rem; font-size: 1.2rem; font-weight: 900; letter-spacing: 0.3px;">🎯 Capaian Pembelajaran</h3>
+        <p style="line-height: 1.8; color: #f7f7f7; text-align: justify; margin-bottom: 1rem;">Setelah mempelajari e-modul ini, peserta didik diharapkan mampu:</p>
+        <ol style="line-height: 2.2; color: #f7f7f7; margin-left: 1.5rem; text-align: justify;">
+         <li>Memahami dan menjelaskan konsep dasar sistem komputer secara komprehensif</li>
+         <li>Mengidentifikasi komponen-komponen hardware dan fungsinya dalam sistem komputer</li>
+         <li>Membedakan berbagai jenis software dan perannya dalam operasional komputer</li>
+         <li>Mengenal peran brainware dalam ekosistem teknologi informasi</li>
+         <li>Memahami fungsi dan cara kerja sistem operasi dalam mengelola sumber daya komputer</li>
+         <li>Menganalisis mekanisme kerja internal komputer dari proses input hingga output</li>
+         <li>Menerapkan prinsip-prinsip interaksi yang efektif antara manusia dan komputer</li>
+         <li>Mengintegrasikan pemahaman hardware, software, dan brainware dalam konteks sistem komputer modern</li>
+        </ol>
+       </div>
+       <div style="background: linear-gradient(135deg, #46578c 0%, #5f52a8 50%, #8b73cf 100%); border-radius: 8px; padding: 2rem; margin-bottom: 1.5rem; border-left: 4px solid #d9d8ff; box-shadow: 0 4px 12px rgba(0,0,0,0.25);">
+        <h3 style="color: #ffffff; margin-bottom: 1.5rem; font-size: 1.2rem; font-weight: 900; letter-spacing: 0.3px;">📋 Kompetensi Dasar</h3>
+        <div style="margin-bottom: 2rem;">
+         <p style="line-height: 1.8; color: #f7f7f7; text-align: justify; margin-bottom: 0.8rem;"><strong style="color: #ffffff; font-size: 1.05rem;">KD 3.1: Memahami konsep sistem komputer dan komponennya</strong></p>
+         <p style="line-height: 1.8; color: rgba(255, 255, 255, 0.95); margin-left: 1rem; margin-bottom: 0.5rem; font-style: italic;">Indikator Pencapaian:</p>
+         <ul style="line-height: 2.2; color: #f7f7f7; margin-left: 2rem; text-align: justify;">
+          <li>Menjelaskan pengertian sistem komputer</li>
+          <li>Mengidentifikasi komponen-komponen sistem komputer (Hardware, Software, Brainware)</li>
+          <li>Menganalisis hubungan antar komponen dalam sistem komputer</li>
+         </ul>
+        </div>
+        <div style="margin-bottom: 2rem;">
+         <p style="line-height: 1.8; color: #f7f7f7; text-align: justify; margin-bottom: 0.8rem;"><strong style="color: #ffffff; font-size: 1.05rem;">KD 3.2: Memahami arsitektur dan organisasi komputer</strong></p>
+         <p style="line-height: 1.8; color: rgba(255, 255, 255, 0.95); margin-left: 1rem; margin-bottom: 0.5rem; font-style: italic;">Indikator Pencapaian:</p>
+         <ul style="line-height: 2.2; color: #f7f7f7; margin-left: 2rem; text-align: justify;">
+          <li>Menjelaskan mekanisme kerja internal komputer (IPO Cycle)</li>
+          <li>Menganalisis proses kerja CPU (Fetch-Decode-Execute-Store)</li>
+          <li>Memahami fungsi komponen internal CPU (ALU, Control Unit, Register, Cache)</li>
+         </ul>
+        </div>
+        <div style="margin-bottom: 0;">
+         <p style="line-height: 1.8; color: #f7f7f7; text-align: justify; margin-bottom: 0.8rem;"><strong style="color: #ffffff; font-size: 1.05rem;">KD 4.1: Menganalisis interaksi antara komponen sistem komputer</strong></p>
+         <p style="line-height: 1.8; color: rgba(255, 255, 255, 0.95); margin-left: 1rem; margin-bottom: 0.5rem; font-style: italic;">Indikator Pencapaian:</p>
+         <ul style="line-height: 2.2; color: #f7f7f7; margin-left: 2rem; text-align: justify;">
+          <li>Mendemonstrasikan cara kerja sistem komputer</li>
+          <li>Mengidentifikasi berbagai antarmuka pengguna (GUI, CLI, Touch, Voice)</li>
+          <li>Menerapkan prinsip interaksi manusia dan komputer yang efektif</li>
+         </ul>
+        </div>
+       </div>
+       <div style="background: linear-gradient(135deg, #3a4a7a 0%, #5c4ea5 50%, #8a72cc 100%); border-radius: 8px; padding: 2rem; box-shadow: 0 4px 12px rgba(0,0,0,0.25);">
+        <h3 style="color: #ffffff; margin-bottom: 0.8rem; font-size: 1.1rem; font-weight: 900; letter-spacing: 0.2px;">🖥️ 1. Hardware (Perangkat Keras)</h3>
+        <p style="line-height: 1.8; color: #f7f7f7; text-align: justify; margin-bottom: 1.5rem;">Hardware adalah komponen fisik komputer yang dapat dilihat dan disentuh. Anda akan mempelajari berbagai perangkat keras seperti CPU, RAM, Motherboard, Hard Disk/SSD, dan perangkat input-output lainnya yang membuat komputer dapat berfungsi.</p>
+        <h3 style="color: #ffffff; margin-bottom: 0.8rem; font-size: 1.1rem; font-weight: 900; letter-spacing: 0.2px;">⚙️ 2. Software (Perangkat Lunak)</h3>
+        <p style="line-height: 1.8; color: #f7f7f7; text-align: justify; margin-bottom: 1.5rem;">Software adalah program atau aplikasi yang memberikan instruksi kepada hardware. Modul ini akan membahas berbagai jenis software mulai dari sistem operasi, aplikasi, utility, hingga programming software beserta karakteristiknya.</p>
+        <h3 style="color: #ffffff; margin-bottom: 0.8rem; font-size: 1.1rem; font-weight: 900; letter-spacing: 0.2px;">👨‍💻 3. Brainware (Pengguna)</h3>
+        <p style="line-height: 1.8; color: #f7f7f7; text-align: justify; margin-bottom: 1.5rem;">Brainware adalah manusia yang mengoperasikan dan mengembangkan komputer. Anda akan mengenal berbagai peran brainware seperti Programmer, System Analyst, Network Administrator, dan profesi IT lainnya.</p>
+        <h3 style="color: #ffffff; margin-bottom: 0.8rem; font-size: 1.1rem; font-weight: 900; letter-spacing: 0.2px;">🖱️ 4. Sistem Operasi</h3>
+        <p style="line-height: 1.8; color: #f7f7f7; text-align: justify; margin-bottom: 1.5rem;">Sistem Operasi adalah software utama yang mengelola seluruh hardware dan software komputer. Materi ini mencakup fungsi sistem operasi, manajemen sumber daya, dan berbagai contoh sistem operasi seperti Windows, Linux, macOS, Android, dan iOS.</p>
+        <h3 style="color: #ffffff; margin-bottom: 0.8rem; font-size: 1.1rem; font-weight: 900; letter-spacing: 0.2px;">⚡ 5. Mekanisme Kerja Internal Komputer</h3>
+        <p style="line-height: 1.8; color: #f7f7f7; text-align: justify; margin-bottom: 1.5rem;">Pelajari bagaimana komputer bekerja secara internal melalui siklus IPO (Input-Process-Output), proses kerja CPU (Fetch-Decode-Execute-Store), dan komponen-komponen penting seperti ALU, Control Unit, Register, dan Cache Memory.</p>
+        <h3 style="color: #ffffff; margin-bottom: 0.8rem; font-size: 1.1rem; font-weight: 900; letter-spacing: 0.2px;">🤝 6. Interaksi Komputer dan Pengguna</h3>
+        <p style="line-height: 1.8; color: #f7f7f7; text-align: justify; margin-bottom: 1.5rem;">Memahami berbagai cara manusia berinteraksi dengan komputer melalui antarmuka GUI, CLI, Touch, Voice, dan Gesture Interface. Anda juga akan mempelajari perangkat input-output serta prinsip-prinsip interaksi yang baik.</p>
+        <p style="line-height: 1.8; color: #f7f7f7; text-align: justify; margin: 0; font-weight: 500; border-top: 2px solid rgba(255, 255, 255, 0.35); padding-top: 1.5rem;">💡 E-Modul ini dilengkapi dengan materi lengkap, video pembelajaran, dan quiz untuk membantu Anda menguasai sistem komputer dengan lebih mudah dan menyenangkan. Selamat belajar!</p>
+       </div>
+      </div>
+      <div style="text-align: center; margin-top: 3rem;"><button onclick="showSection('materi')" class="nav-button"> Lanjut ke Materi → </button>
+      </div>
+     </section><!-- Materi Section -->
+     <section id="materi" class="section">
+      <div class="section-header-box" style="background: linear-gradient(135deg, #ec4899 0%, #3b82f6 100%); border-radius: 15px; padding: 2rem; margin-bottom: 2rem; box-shadow: 0 8px 25px rgba(102, 126, 234, 0.3);">
+       <h1 style="color: white; font-size: 2.2rem; margin: 0; font-weight: 800; letter-spacing: 0.5px; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);">Materi Pembelajaran</h1>
+      </div>
+      <div class="materi-container"><!-- Hardware -->
+       <div class="materi-item">
+        <h2 id="hardwareTitle">🖥️ Hardware (Perangkat Keras)</h2>
+        <div class="materi-content">
+         <div class="materi-image" style="background: url('https://i.imgur.com/SOuTmBK.png') center/cover; background-size: cover;">
+         </div>
+         <div class="materi-text">
+          <p><strong>Hardware</strong> adalah komponen fisik dari komputer yang dapat dilihat dan disentuh. Hardware merupakan bagian penting yang membuat komputer dapat berfungsi.</p>
+          <h4>Komponen Utama Hardware:</h4>
+          <ul>
+           <li><strong>CPU (Central Processing Unit)</strong> - Otak komputer yang memproses semua instruksi</li>
+           <li><strong>RAM (Random Access Memory)</strong> - Memori sementara untuk menjalankan program</li>
+           <li><strong>Motherboard</strong> - Papan induk yang menghubungkan semua komponen</li>
+           <li><strong>Hard Disk/SSD</strong> - Media penyimpanan data permanen</li>
+           <li><strong>Power Supply</strong> - Sumber daya listrik untuk komputer</li>
+           <li><strong>Monitor</strong> - Perangkat output untuk menampilkan informasi</li>
+           <li><strong>Keyboard &amp; Mouse</strong> - Perangkat input untuk berinteraksi</li>
+          </ul>
+         </div>
+        </div>
+       </div><!-- Software -->
+       <div class="materi-item">
+        <h2 id="softwareTitle">⚙️ Software (Perangkat Lunak)</h2>
+        <div class="materi-content">
+         <div class="materi-image" style="background: url('https://i.imgur.com/03jBm9y.png') center/cover; background-size: cover;">
+         </div>
+         <div class="materi-text">
+          <p><strong>Software</strong> adalah program atau aplikasi yang memberikan instruksi kepada hardware untuk melakukan tugas tertentu. Software tidak dapat dilihat secara fisik tetapi dapat dioperasikan.</p>
+          <h4>Jenis-jenis Software:</h4>
+          <ul>
+           <li><strong>Sistem Operasi</strong> - Windows, Linux, macOS (mengelola hardware dan software)</li>
+           <li><strong>Software Aplikasi</strong> - Microsoft Office, Adobe Photoshop, Browser</li>
+           <li><strong>Software Utility</strong> - Antivirus, Disk Cleaner, Backup Tools</li>
+           <li><strong>Programming Software</strong> - Visual Studio, Eclipse, Python IDE</li>
+           <li><strong>Software Driver</strong> - Program untuk mengoperasikan hardware tertentu</li>
+          </ul>
+          <h4>Karakteristik Software:</h4>
+          <ul>
+           <li>Dapat diinstal dan dihapus</li>
+           <li>Dapat diperbarui (update)</li>
+           <li>Memerlukan lisensi penggunaan</li>
+           <li>Dapat rusak karena virus atau error</li>
+          </ul>
+         </div>
+        </div>
+       </div><!-- Brainware -->
+       <div class="materi-item">
+        <h2 id="brainwareTitle">👨‍💻 Brainware (Pengguna)</h2>
+        <div class="materi-content">
+         <div class="materi-image" style="background: url('https://i.imgur.com/dT5o1sD.png') center/cover; background-size: cover;">
+         </div>
+         <div class="materi-text">
+          <p><strong>Brainware</strong> adalah manusia yang mengoperasikan dan mengembangkan komputer. Brainware merupakan elemen penting karena hardware dan software tidak akan berfungsi optimal tanpa manusia yang mengoperasikannya.</p>
+          <h4>Kategori Brainware:</h4>
+          <ul>
+           <li><strong>Programmer</strong> - Membuat dan mengembangkan software</li>
+           <li><strong>System Analyst</strong> - Menganalisis kebutuhan sistem</li>
+           <li><strong>Network Administrator</strong> - Mengelola jaringan komputer</li>
+           <li><strong>Database Administrator</strong> - Mengelola database</li>
+           <li><strong>End User</strong> - Pengguna akhir komputer</li>
+           <li><strong>Teknisi</strong> - Memperbaiki hardware dan software</li>
+          </ul>
+          <h4>Peran Brainware:</h4>
+          <ul>
+           <li>Mengoperasikan komputer sesuai kebutuhan</li>
+           <li>Mengembangkan dan memelihara sistem</li>
+           <li>Memecahkan masalah teknis</li>
+           <li>Meningkatkan produktivitas dengan teknologi</li>
+          </ul>
+         </div>
+        </div>
+       </div><!-- Sistem Operasi -->
+       <div class="materi-item">
+        <h2 id="osTitle">🖱️ Sistem Operasi</h2>
+        <div class="materi-content">
+         <div class="materi-image" style="background: url('https://i.imgur.com/rCOQ1pB.png') center/cover; background-size: cover;">
+         </div>
+         <div class="materi-text">
+          <p><strong>Sistem Operasi</strong> adalah software utama yang mengelola seluruh hardware dan software komputer. Sistem operasi bertindak sebagai jembatan antara pengguna dengan perangkat keras komputer.</p>
+          <h4>Fungsi Utama Sistem Operasi:</h4>
+          <ul>
+           <li><strong>Manajemen Prosesor</strong> - Mengatur penggunaan CPU untuk menjalankan program</li>
+           <li><strong>Manajemen Memori</strong> - Mengatur pengalokasian RAM untuk aplikasi</li>
+           <li><strong>Manajemen File</strong> - Mengorganisir penyimpanan dan pengambilan data</li>
+           <li><strong>Manajemen Input/Output</strong> - Mengatur komunikasi dengan perangkat eksternal</li>
+           <li><strong>Keamanan Sistem</strong> - Melindungi data dan mengatur hak akses pengguna</li>
+           <li><strong>User Interface</strong> - Menyediakan antarmuka pengguna (GUI atau CLI)</li>
+          </ul>
+          <h4>Contoh Sistem Operasi Populer:</h4>
+          <ul>
+           <li><strong>Windows</strong> - Sistem operasi paling populer untuk PC</li>
+           <li><strong>macOS</strong> - Sistem operasi eksklusif untuk produk Apple</li>
+           <li><strong>Linux</strong> - Sistem operasi open-source dan gratis</li>
+           <li><strong>Android</strong> - Sistem operasi untuk smartphone</li>
+           <li><strong>iOS</strong> - Sistem operasi untuk iPhone dan iPad</li>
+          </ul>
+         </div>
+        </div>
+       </div><!-- Mekanisme Kerja Internal -->
+       <div class="materi-item">
+        <h2 id="mechanismTitle">⚡ Mekanisme Kerja Internal Komputer</h2>
+        <div class="materi-content">
+         <div class="materi-image" style="background: url('https://i.imgur.com/nBsDOeW.png') center/cover; background-size: cover;">
+         </div>
+         <div class="materi-text">
+          <p><strong>Mekanisme Kerja Internal Komputer</strong> mengikuti siklus yang disebut IPO (Input-Process-Output). Proses ini terjadi secara berulang dan sangat cepat di dalam sistem komputer.</p>
+          <h4>Tahapan Kerja Komputer:</h4>
+          <ul>
+           <li><strong>Input</strong> - Menerima data dari perangkat input (keyboard, mouse, scanner)</li>
+           <li><strong>Processing</strong> - CPU memproses data sesuai instruksi program</li>
+           <li><strong>Output</strong> - Menampilkan hasil ke perangkat output (monitor, printer, speaker)</li>
+           <li><strong>Storage</strong> - Menyimpan data di media penyimpanan (HDD/SSD)</li>
+          </ul>
+          <h4>Proses Internal CPU:</h4>
+          <ul>
+           <li><strong>Fetch</strong> - Mengambil instruksi dari memori</li>
+           <li><strong>Decode</strong> - Menerjemahkan instruksi menjadi sinyal kontrol</li>
+           <li><strong>Execute</strong> - Menjalankan instruksi yang telah diterjemahkan</li>
+           <li><strong>Store</strong> - Menyimpan hasil ke memori atau register</li>
+          </ul>
+          <h4>Komponen yang Terlibat:</h4>
+          <ul>
+           <li><strong>ALU (Arithmetic Logic Unit)</strong> - Melakukan operasi aritmatika dan logika</li>
+           <li><strong>Control Unit</strong> - Mengatur dan mengkoordinasikan operasi CPU</li>
+           <li><strong>Register</strong> - Memori super cepat di dalam CPU</li>
+           <li><strong>Cache Memory</strong> - Memori penyangga antara RAM dan CPU</li>
+          </ul>
+         </div>
+        </div>
+       </div><!-- Interaksi Komputer dan Pengguna -->
+       <div class="materi-item">
+        <h2 id="interactionTitle">🤝 Interaksi Komputer dan Pengguna</h2>
+        <div class="materi-content">
+         <div class="materi-image" style="background: url('https://i.imgur.com/uv2o23I.png') center/cover; background-size: cover;">
+         </div>
+         <div class="materi-text">
+          <p><strong>Interaksi Komputer dan Pengguna</strong> adalah cara bagaimana manusia berkomunikasi dengan komputer melalui berbagai antarmuka. Interaksi yang baik membuat komputer lebih mudah digunakan dan produktif.</p>
+          <h4>Jenis-jenis Antarmuka:</h4>
+          <ul>
+           <li><strong>GUI (Graphical User Interface)</strong> - Antarmuka grafis dengan ikon, menu, dan jendela</li>
+           <li><strong>CLI (Command Line Interface)</strong> - Antarmuka berbasis teks dengan perintah</li>
+           <li><strong>Touch Interface</strong> - Antarmuka sentuh pada layar smartphone/tablet</li>
+           <li><strong>Voice Interface</strong> - Antarmuka suara seperti Siri, Google Assistant</li>
+           <li><strong>Gesture Interface</strong> - Antarmuka gerakan tubuh seperti Kinect</li>
+          </ul>
+          <h4>Perangkat Interaksi:</h4>
+          <ul>
+           <li><strong>Input Device</strong> - Keyboard, mouse, touchpad, microphone, webcam</li>
+           <li><strong>Output Device</strong> - Monitor, speaker, printer, proyektor</li>
+           <li><strong>Input-Output Device</strong> - Touchscreen, headset VR, modem</li>
+          </ul>
+          <h4>Prinsip Interaksi yang Baik:</h4>
+          <ul>
+           <li><strong>User-Friendly</strong> - Mudah dipahami dan digunakan</li>
+           <li><strong>Konsisten</strong> - Tampilan dan fungsi yang seragam</li>
+           <li><strong>Responsif</strong> - Memberikan feedback yang cepat</li>
+           <li><strong>Error Prevention</strong> - Mencegah kesalahan pengguna</li>
+           <li><strong>Aksesibilitas</strong> - Dapat digunakan oleh semua orang termasuk disabilitas</li>
+          </ul>
+          <h4>Contoh Interaksi Modern:</h4>
+          <ul>
+           <li>Menggunakan mouse untuk klik dan drag</li>
+           <li>Mengetik dengan keyboard untuk input teks</li>
+           <li>Swipe dan pinch pada layar sentuh smartphone</li>
+           <li>Perintah suara ke asisten virtual</li>
+           <li>Virtual Reality untuk pengalaman immersive</li>
+          </ul>
+         </div>
+        </div>
+       </div>
+      </div>
+      <div style="background: linear-gradient(135deg, #fff5e6 0%, #ffe6e6 100%); border-radius: 10px; padding: 2rem; margin-top: 3rem; text-align: center; border: 2px dashed #ff9800; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+       <h3 style="color: #ff6f00; margin-bottom: 1rem; font-size: 1.3rem; font-weight: 900; letter-spacing: 0.5px; text-shadow: 1px 1px 2px rgba(0,0,0,0.1);">📥 Download E-Book Lengkap</h3>
+       <p style="color: #333; margin-bottom: 1.5rem; line-height: 1.6;">Unduh e-book lengkap tentang Sistem Komputer untuk referensi pembelajaran Anda. File PDF ini berisi semua materi yang telah dipelajari.</p><a href="https://drive.google.com/file/d/1cLQnTgYFPEno_0k8Dnl1ikKMTaVzxy10/view?usp=drive_link" target="_blank" rel="noopener noreferrer" style="display: inline-block; padding: 1rem 2.5rem; background: linear-gradient(135deg, #ff9800 0%, #ff6f00 100%); color: white; text-decoration: none; border-radius: 50px; font-weight: 600; font-size: 1.1rem; box-shadow: 0 4px 15px rgba(255, 152, 0, 0.4); transition: all 0.3s; cursor: pointer; font-family: 'Poppins', sans-serif;"> 📄 Download E-Book PDF </a>
+       <style>
+        a[href*="drive.google.com"] {
+          animation: none !important;
+        }
+        a[href*="drive.google.com"]:hover {
+          transform: translateY(-5px);
+          box-shadow: 0 8px 25px rgba(255, 152, 0, 0.7) !important;
+          background: linear-gradient(135deg, #ff6f00 0%, #ff9800 100%) !important;
+        }
+        a[href*="drive.google.com"]:active {
+          transform: translateY(-2px);
+          box-shadow: 0 5px 18px rgba(255, 152, 0, 0.5) !important;
+        }
+      </style>
+       <p style="color: #666; font-size: 0.9rem; margin-top: 1rem;">Klik tombol di atas untuk membuka link download di Google Drive</p>
+      </div>
+      <div style="text-align: center; margin-top: 3rem;"><button onclick="showSection('video')" class="nav-button"> Lanjut ke Video Pembelajaran → </button>
+      </div>
+     </section><!-- Video Section -->
+     <section id="video" class="section">
+      <div class="section-header-box" style="background: linear-gradient(135deg, #8b5cf6 0%, #3b82f6 100%); border-radius: 15px; padding: 2rem; margin-bottom: 2rem; box-shadow: 0 8px 25px rgba(102, 126, 234, 0.3);">
+       <h1 style="color: white; font-size: 2.2rem; margin: 0; font-weight: 800; letter-spacing: 0.5px; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);">Video Pembelajaran</h1>
+      </div>
+      <div class="video-grid">
+       <div class="video-card">
+        <div class="video-thumbnail" style="background: url('https://i.imgur.com/SOuTmBK.png') center/cover; background-color: #667eea;"></div>
+        <div class="video-info">
+         <h3>Hardware Komputer</h3>
+         <p>Penjelasan lengkap tentang komponen hardware komputer dan fungsinya.</p><a href="https://www.youtube.com/watch?v=Y-BU-1J_2Vo" target="_blank" rel="noopener noreferrer" class="video-link">Tonton Video</a>
+         <div style="margin-top: 0.8rem; padding-top: 0.8rem; border-top: 1px solid #e0e0e0;">
+          <p style="font-size: 0.85rem; color: #666; margin-bottom: 0.5rem;">Link Alternatif:</p><a href="https://youtu.be/Y-BU-1J_2Vo" target="_blank" rel="noopener noreferrer" style="color: #667eea; text-decoration: none; font-size: 0.9rem; word-break: break-all;">https://youtu.be/Y-BU-1J_2Vo</a>
+         </div>
+        </div>
+       </div>
+       <div class="video-card">
+        <div class="video-thumbnail" style="background: url('https://i.imgur.com/03jBm9y.png') center/cover; background-color: #667eea; background-size: cover;"></div>
+        <div class="video-info">
+         <h3>Software Komputer</h3>
+         <p>Memahami berbagai jenis software dan cara kerjanya dalam sistem komputer.</p><a href="https://youtu.be/nL_fwyo6zpc?si=V6nuXoZm2lrGw0Vu" target="_blank" rel="noopener noreferrer" class="video-link">Tonton Video</a>
+         <div style="margin-top: 0.8rem; padding-top: 0.8rem; border-top: 1px solid #e0e0e0;">
+          <p style="font-size: 0.85rem; color: #666; margin-bottom: 0.5rem;">Link Alternatif:</p><a href="https://youtu.be/nL_fwyo6zpc?si=V6nuXoZm2lrGw0Vu" target="_blank" rel="noopener noreferrer" style="color: #667eea; text-decoration: none; font-size: 0.9rem;">youtu.be/nL_fwyo6zpc</a>
+         </div>
+        </div>
+       </div>
+       <div class="video-card">
+        <div class="video-thumbnail" style="background: url('https://i.imgur.com/dT5o1sD.png') center/cover; background-color: #667eea;"></div>
+        <div class="video-info">
+         <h3>Brainware dan Perannya</h3>
+         <p>Mengenal peran manusia dalam sistem komputer dan berbagai profesi IT.</p><a href="https://youtu.be/Kqv5V1vpfHw?si=UQ2mJ_bQvHt9bgvk" target="_blank" rel="noopener noreferrer" class="video-link">Tonton Video</a>
+         <div style="margin-top: 0.8rem; padding-top: 0.8rem; border-top: 1px solid #e0e0e0;">
+          <p style="font-size: 0.85rem; color: #666; margin-bottom: 0.5rem;">Link Alternatif:</p><a href="https://youtu.be/Kqv5V1vpfHw?si=UQ2mJ_bQvHt9bgvk" target="_blank" rel="noopener noreferrer" style="color: #667eea; text-decoration: none; font-size: 0.9rem;">youtu.be/Kqv5V1vpfHw</a>
+         </div>
+        </div>
+       </div>
+       <div class="video-card">
+        <div class="video-thumbnail" style="background: url('https://i.imgur.com/rCOQ1pB.png') center/cover; background-color: #667eea;"></div>
+        <div class="video-info">
+         <h3>Sistem Operasi</h3>
+         <p>Memahami fungsi dan jenis-jenis sistem operasi yang mengelola komputer.</p><a href="https://youtu.be/rRFZ5hExKI8?si=IpXKwUTsocZx_Uku" target="_blank" rel="noopener noreferrer" class="video-link">Tonton Video</a>
+         <div style="margin-top: 0.8rem; padding-top: 0.8rem; border-top: 1px solid #e0e0e0;">
+          <p style="font-size: 0.85rem; color: #666; margin-bottom: 0.5rem;">Link Alternatif:</p><a href="https://youtu.be/rRFZ5hExKI8?si=IpXKwUTsocZx_Uku" target="_blank" rel="noopener noreferrer" style="color: #667eea; text-decoration: none; font-size: 0.9rem;">youtu.be/rRFZ5hExKI8</a>
+         </div>
+        </div>
+       </div>
+       <div class="video-card">
+        <div class="video-thumbnail" style="background: url('https://i.imgur.com/nBsDOeW.png') center/cover; background-color: #667eea;"></div>
+        <div class="video-info">
+         <h3>Mekanisme Kerja Internal Komputer</h3>
+         <p>Mengenal bagaimana komputer memproses data secara internal dari input hingga output.</p><a href="https://youtu.be/Y2v4t5kqUXE?si=IcPsegGMMLZa-gAw" target="_blank" rel="noopener noreferrer" class="video-link">Tonton Video</a>
+         <div style="margin-top: 0.8rem; padding-top: 0.8rem; border-top: 1px solid #e0e0e0;">
+          <p style="font-size: 0.85rem; color: #666; margin-bottom: 0.5rem;">Link Alternatif:</p><a href="https://youtu.be/Y2v4t5kqUXE" target="_blank" rel="noopener noreferrer" style="color: #667eea; text-decoration: none; font-size: 0.9rem;">youtu.be/Y2v4t5kqUXE</a>
+         </div>
+        </div>
+       </div>
+       <div class="video-card">
+        <div class="video-thumbnail" style="background: url('https://i.imgur.com/uv2o23I.png') center/cover; background-color: #667eea;"></div>
+        <div class="video-info">
+         <h3>Interaksi Komputer dan Pengguna</h3>
+         <p>Pelajari bagaimana pengguna berinteraksi dengan komputer melalui antarmuka dan perangkat.</p><a href="https://youtu.be/-Ds2dxk6ILA?si=mBCncH5Vj5FDZE6u" target="_blank" rel="noopener noreferrer" class="video-link">Tonton Video</a>
+         <div style="margin-top: 0.8rem; padding-top: 0.8rem; border-top: 1px solid #e0e0e0;">
+          <p style="font-size: 0.85rem; color: #666; margin-bottom: 0.5rem;">Link Alternatif:</p><a href="https://youtu.be/-Ds2dxk6ILA" target="_blank" rel="noopener noreferrer" style="color: #667eea; text-decoration: none; font-size: 0.9rem;">youtu.be/-Ds2dxk6ILA</a>
+         </div>
+        </div>
+       </div>
+      </div>
+      <div style="text-align: center; margin-top: 3rem;"><button onclick="showSection('quiz')" class="nav-button"> Lanjut ke Quiz → </button>
+      </div>
+     </section><!-- Quiz Section -->
+     <section id="quiz" class="section">
+      <div class="section-header-box">
+       <h1>Quiz Sistem Komputer</h1>
+      </div>
+      <div class="quiz-question">
+       <h3>1. Apa yang dimaksud dengan Hardware?</h3>
+       <div class="quiz-options">
+        <div class="quiz-option" data-question="1" data-answer="a">
+         A. Perangkat lunak komputer
+        </div>
+        <div class="quiz-option" data-question="1" data-answer="b">
+         B. Perangkat keras komputer yang dapat dilihat dan disentuh
+        </div>
+        <div class="quiz-option" data-question="1" data-answer="c">
+         C. Pengguna komputer
+        </div>
+        <div class="quiz-option" data-question="1" data-answer="d">
+         D. Jaringan internet
+        </div>
+       </div>
+      </div>
+      <div class="quiz-question">
+       <h3>2. Manakah yang termasuk Software?</h3>
+       <div class="quiz-options">
+        <div class="quiz-option" data-question="2" data-answer="a">
+         A. Monitor
+        </div>
+        <div class="quiz-option" data-question="2" data-answer="b">
+         B. Keyboard
+        </div>
+        <div class="quiz-option" data-question="2" data-answer="c">
+         C. Microsoft Windows
+        </div>
+        <div class="quiz-option" data-question="2" data-answer="d">
+         D. Mouse
+        </div>
+       </div>
+      </div>
+      <div class="quiz-question">
+       <h3>3. CPU adalah singkatan dari?</h3>
+       <div class="quiz-options">
+        <div class="quiz-option" data-question="3" data-answer="a">
+         A. Computer Processing Unit
+        </div>
+        <div class="quiz-option" data-question="3" data-answer="b">
+         B. Central Processing Unit
+        </div>
+        <div class="quiz-option" data-question="3" data-answer="c">
+         C. Central Program Unit
+        </div>
+        <div class="quiz-option" data-question="3" data-answer="d">
+         D. Computer Program Unit
+        </div>
+       </div>
+      </div>
+      <div class="quiz-question">
+       <h3>4. Apa yang dimaksud dengan Brainware?</h3>
+       <div class="quiz-options">
+        <div class="quiz-option" data-question="4" data-answer="a">
+         A. Perangkat keras komputer
+        </div>
+        <div class="quiz-option" data-question="4" data-answer="b">
+         B. Perangkat lunak komputer
+        </div>
+        <div class="quiz-option" data-question="4" data-answer="c">
+         C. Manusia yang mengoperasikan komputer
+        </div>
+        <div class="quiz-option" data-question="4" data-answer="d">
+         D. Jaringan komputer
+        </div>
+       </div>
+      </div>
+      <div class="quiz-question">
+       <h3>5. Fungsi utama RAM adalah?</h3>
+       <div class="quiz-options">
+        <div class="quiz-option" data-question="5" data-answer="a">
+         A. Menyimpan data permanen
+        </div>
+        <div class="quiz-option" data-question="5" data-answer="b">
+         B. Memori sementara untuk menjalankan program
+        </div>
+        <div class="quiz-option" data-question="5" data-answer="c">
+         C. Menampilkan gambar
+        </div>
+        <div class="quiz-option" data-question="5" data-answer="d">
+         D. Menghubungkan internet
+        </div>
+       </div>
+      </div>
+      <div class="quiz-question">
+       <h3>6. Berikut ini yang termasuk sistem operasi adalah?</h3>
+       <div class="quiz-options">
+        <div class="quiz-option" data-question="6" data-answer="a">
+         A. Microsoft Word
+        </div>
+        <div class="quiz-option" data-question="6" data-answer="b">
+         B. Google Chrome
+        </div>
+        <div class="quiz-option" data-question="6" data-answer="c">
+         C. Windows 11
+        </div>
+        <div class="quiz-option" data-question="6" data-answer="d">
+         D. Adobe Photoshop
+        </div>
+       </div>
+      </div>
+      <div class="quiz-question">
+       <h3>7. Motherboard berfungsi untuk?</h3>
+       <div class="quiz-options">
+        <div class="quiz-option" data-question="7" data-answer="a">
+         A. Menampilkan gambar di layar
+        </div>
+        <div class="quiz-option" data-question="7" data-answer="b">
+         B. Menghubungkan semua komponen hardware
+        </div>
+        <div class="quiz-option" data-question="7" data-answer="c">
+         C. Menyimpan data
+        </div>
+        <div class="quiz-option" data-question="7" data-answer="d">
+         D. Memberikan daya listrik
+        </div>
+       </div>
+      </div>
+      <div class="quiz-question">
+       <h3>8. Yang termasuk perangkat input adalah?</h3>
+       <div class="quiz-options">
+        <div class="quiz-option" data-question="8" data-answer="a">
+         A. Monitor
+        </div>
+        <div class="quiz-option" data-question="8" data-answer="b">
+         B. Speaker
+        </div>
+        <div class="quiz-option" data-question="8" data-answer="c">
+         C. Printer
+        </div>
+        <div class="quiz-option" data-question="8" data-answer="d">
+         D. Keyboard
+        </div>
+       </div>
+      </div>
+      <div class="quiz-question">
+       <h3>9. Perbedaan utama antara HDD dan SSD adalah?</h3>
+       <div class="quiz-options">
+        <div class="quiz-option" data-question="9" data-answer="a">
+         A. HDD lebih cepat dari SSD
+        </div>
+        <div class="quiz-option" data-question="9" data-answer="b">
+         B. SSD menggunakan chip memori, HDD menggunakan piringan magnetik
+        </div>
+        <div class="quiz-option" data-question="9" data-answer="c">
+         C. HDD lebih mahal dari SSD
+        </div>
+        <div class="quiz-option" data-question="9" data-answer="d">
+         D. SSD tidak dapat menyimpan data
+        </div>
+       </div>
+      </div>
+      <div class="quiz-question">
+       <h3>10. Profesi yang bertugas membuat dan mengembangkan software disebut?</h3>
+       <div class="quiz-options">
+        <div class="quiz-option" data-question="10" data-answer="a">
+         A. Network Administrator
+        </div>
+        <div class="quiz-option" data-question="10" data-answer="b">
+         B. Database Administrator
+        </div>
+        <div class="quiz-option" data-question="10" data-answer="c">
+         C. Programmer
+        </div>
+        <div class="quiz-option" data-question="10" data-answer="d">
+         D. System Analyst
+        </div>
+       </div>
+      </div>
+      <div class="quiz-question">
+       <h3>11. Fungsi utama sistem operasi adalah?</h3>
+       <div class="quiz-options">
+        <div class="quiz-option" data-question="11" data-answer="a">
+         A. Membuat dokumen
+        </div>
+        <div class="quiz-option" data-question="11" data-answer="b">
+         B. Mengelola hardware dan software komputer
+        </div>
+        <div class="quiz-option" data-question="11" data-answer="c">
+         C. Browsing internet
+        </div>
+        <div class="quiz-option" data-question="11" data-answer="d">
+         D. Membuat presentasi
+        </div>
+       </div>
+      </div>
+      <div class="quiz-question">
+       <h3>12. Manakah yang merupakan sistem operasi open-source?</h3>
+       <div class="quiz-options">
+        <div class="quiz-option" data-question="12" data-answer="a">
+         A. Windows
+        </div>
+        <div class="quiz-option" data-question="12" data-answer="b">
+         B. macOS
+        </div>
+        <div class="quiz-option" data-question="12" data-answer="c">
+         C. Linux
+        </div>
+        <div class="quiz-option" data-question="12" data-answer="d">
+         D. iOS
+        </div>
+       </div>
+      </div>
+      <div class="quiz-question">
+       <h3>13. IPO dalam mekanisme kerja komputer adalah singkatan dari?</h3>
+       <div class="quiz-options">
+        <div class="quiz-option" data-question="13" data-answer="a">
+         A. Internet-Process-Output
+        </div>
+        <div class="quiz-option" data-question="13" data-answer="b">
+         B. Input-Process-Output
+        </div>
+        <div class="quiz-option" data-question="13" data-answer="c">
+         C. Input-Program-Operation
+        </div>
+        <div class="quiz-option" data-question="13" data-answer="d">
+         D. Install-Process-Open
+        </div>
+       </div>
+      </div>
+      <div class="quiz-question">
+       <h3>14. Tahapan kerja CPU yang pertama adalah?</h3>
+       <div class="quiz-options">
+        <div class="quiz-option" data-question="14" data-answer="a">
+         A. Execute
+        </div>
+        <div class="quiz-option" data-question="14" data-answer="b">
+         B. Store
+        </div>
+        <div class="quiz-option" data-question="14" data-answer="c">
+         C. Decode
+        </div>
+        <div class="quiz-option" data-question="14" data-answer="d">
+         D. Fetch
+        </div>
+       </div>
+      </div>
+      <div class="quiz-question">
+       <h3>15. ALU adalah komponen CPU yang berfungsi untuk?</h3>
+       <div class="quiz-options">
+        <div class="quiz-option" data-question="15" data-answer="a">
+         A. Menyimpan data
+        </div>
+        <div class="quiz-option" data-question="15" data-answer="b">
+         B. Melakukan operasi aritmatika dan logika
+        </div>
+        <div class="quiz-option" data-question="15" data-answer="c">
+         C. Mengatur aliran data
+        </div>
+        <div class="quiz-option" data-question="15" data-answer="d">
+         D. Menampilkan gambar
+        </div>
+       </div>
+      </div>
+      <div class="quiz-question">
+       <h3>16. GUI adalah singkatan dari?</h3>
+       <div class="quiz-options">
+        <div class="quiz-option" data-question="16" data-answer="a">
+         A. General User Interface
+        </div>
+        <div class="quiz-option" data-question="16" data-answer="b">
+         B. Graphical User Interface
+        </div>
+        <div class="quiz-option" data-question="16" data-answer="c">
+         C. Global User Integration
+        </div>
+        <div class="quiz-option" data-question="16" data-answer="d">
+         D. Graphics Universal Interface
+        </div>
+       </div>
+      </div>
+      <div class="quiz-question">
+       <h3>17. Contoh antarmuka berbasis teks adalah?</h3>
+       <div class="quiz-options">
+        <div class="quiz-option" data-question="17" data-answer="a">
+         A. GUI
+        </div>
+        <div class="quiz-option" data-question="17" data-answer="b">
+         B. Touch Interface
+        </div>
+        <div class="quiz-option" data-question="17" data-answer="c">
+         C. CLI (Command Line Interface)
+        </div>
+        <div class="quiz-option" data-question="17" data-answer="d">
+         D. Voice Interface
+        </div>
+       </div>
+      </div>
+      <div class="quiz-question">
+       <h3>18. Perangkat yang termasuk input-output device adalah?</h3>
+       <div class="quiz-options">
+        <div class="quiz-option" data-question="18" data-answer="a">
+         A. Monitor
+        </div>
+        <div class="quiz-option" data-question="18" data-answer="b">
+         B. Keyboard
+        </div>
+        <div class="quiz-option" data-question="18" data-answer="c">
+         C. Touchscreen
+        </div>
+        <div class="quiz-option" data-question="18" data-answer="d">
+         D. Speaker
+        </div>
+       </div>
+      </div>
+      <div class="quiz-question">
+       <h3>19. Memori penyangga antara RAM dan CPU disebut?</h3>
+       <div class="quiz-options">
+        <div class="quiz-option" data-question="19" data-answer="a">
+         A. ROM
+        </div>
+        <div class="quiz-option" data-question="19" data-answer="b">
+         B. Hard Disk
+        </div>
+        <div class="quiz-option" data-question="19" data-answer="c">
+         C. Cache Memory
+        </div>
+        <div class="quiz-option" data-question="19" data-answer="d">
+         D. Virtual Memory
+        </div>
+       </div>
+      </div>
+      <div class="quiz-question">
+       <h3>20. Prinsip interaksi komputer yang baik harus memiliki sifat?</h3>
+       <div class="quiz-options">
+        <div class="quiz-option" data-question="20" data-answer="a">
+         A. Kompleks dan rumit
+        </div>
+        <div class="quiz-option" data-question="20" data-answer="b">
+         B. User-friendly dan mudah digunakan
+        </div>
+        <div class="quiz-option" data-question="20" data-answer="c">
+         C. Lambat dalam memberikan respon
+        </div>
+        <div class="quiz-option" data-question="20" data-answer="d">
+         D. Tidak konsisten
+        </div>
+       </div>
+      </div><button class="quiz-submit" onclick="submitQuiz()">Submit Jawaban</button>
+      <div class="quiz-result" id="quizResult">
+       <h3>Hasil Quiz Anda</h3>
+       <p id="scoreText"></p><button class="quiz-reset" onclick="resetQuiz()">Ulangi Quiz</button>
+      </div>
+      <div style="text-align: center; margin-top: 3rem;"><button onclick="showSection('profil')" class="nav-button"> Lanjut ke Profil → </button>
+      </div>
+     </section><!-- Profil Section -->
+     <section id="profil" class="section">
+      <div class="profil-container">
+       <div class="profil-photo"><img src="https://i.imgur.com/kVHlh4G.jpeg" alt="Foto Profil Rizky Wibowo" onerror="this.style.display='none'; this.parentElement.innerHTML='👨‍🏫';">
+       </div>
+       <div class="profil-info">
+        <h2>Profil Pembuat</h2>
+        <p><strong>Nama:</strong> Rizky Wibowo S.Pd</p>
+        <p><strong>Profesi:</strong> Guru/Pendidik Teknologi Informasi</p>
+        <p><strong>Email:</strong> rizkywibowo0612@gmail.com</p>
+        <p style="margin-top: 2rem;">E-Modul ini dibuat untuk membantu siswa memahami sistem komputer dengan cara yang Inovatif dan mudah dalam Memahaminya. Semoga bermanfaat untuk pembelajaran Anda!</p>
+       </div>
+      </div>
+      <div style="text-align: center; margin-top: 3rem;"><button onclick="handleLogout()" class="nav-button"> Kembali ke Halaman Login → </button>
+      </div>
+     </section>
+    </div>
+   </div>
+   <footer>
+    <p id="footerText">© 2026 E-Modul Sistem Komputer Kelas X TSM</p>
+   </footer>
+   <script>
+    // Demo accounts
+    const demoAccounts = [
+      { username: 'siswa1', password: '123456' },
+      { username: 'siswa2', password: '123456' }
+    ];
+
+    function handleLogin(event) {
+      event.preventDefault();
+      
+      const username = document.getElementById('username').value.trim();
+      const loginError = document.getElementById('loginError');
+      const loginBtn = document.querySelector('.login-btn');
+      
+      // Clear previous error
+      loginError.classList.remove('show');
+      loginError.textContent = '';
+      
+      // Validate input
+      if (!username) {
+        loginError.textContent = '⚠️ Mohon masukkan nama pengguna terlebih dahulu!';
+        loginError.classList.add('show');
+        return;
+      }
+      
+      // Disable button during login
+      loginBtn.disabled = true;
+      loginBtn.textContent = 'Sedang Memproses...';
+      
+      // Simulate login process with delay
+      setTimeout(() => {
+        // Accept any non-empty username
+        if (username.length > 0) {
+          // Store user info in sessionStorage
+          sessionStorage.setItem('currentUser', username);
+          
+          // Hide login page and show e-modul content
+          document.getElementById('loginPage').style.display = 'none';
+          document.getElementById('emodelContent').style.display = 'block';
+          
+          // Scroll to top
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+      }, 600);
+    }
+
+    function handleLogout() {
+      // Remove user session
+      sessionStorage.removeItem('currentUser');
+      
+      // Hide e-modul content and show login
+      document.getElementById('emodelContent').style.display = 'none';
+      document.getElementById('loginPage').style.display = 'flex';
+      
+      // Clear form inputs
+      document.getElementById('username').value = '';
+      
+      // Reset login button state
+      const loginBtn = document.querySelector('.login-btn');
+      loginBtn.disabled = false;
+      loginBtn.textContent = 'Masuk';
+      
+      // Clear error message
+      const loginError = document.getElementById('loginError');
+      loginError.classList.remove('show');
+      loginError.textContent = '';
+      
+      // Scroll to top
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    // Check if user is already logged in when page loads
+    window.addEventListener('load', () => {
+      const currentUser = sessionStorage.getItem('currentUser');
+      if (currentUser) {
+        document.getElementById('loginPage').style.display = 'none';
+        document.getElementById('emodelContent').style.display = 'block';
+      }
+    });
+
+    const defaultConfig = {
+      site_title: "E-Modul Sistem Komputer",
+      welcome_text: "Pelajari tentang Hardware, Software, Brainware, Sistem Operasi, Mekanisme Kerja Internal Komputer dan interaksi komputer dengan cara yang menyenangkan!",
+      hardware_title: "🖥️ Hardware (Perangkat Keras)",
+      software_title: "⚙️ Software (Perangkat Lunak)",
+      brainware_title: "👨‍💻 Brainware (Pengguna)",
+      os_title: "🖱️ Sistem Operasi",
+      mechanism_title: "⚡ Mekanisme Kerja Internal Komputer",
+      interaction_title: "🤝 Interaksi Komputer dan Pengguna",
+      footer_text: "© 2026 E-Modul Sistem Komputer Kelas X TSM"
+    };
+
+    let selectedAnswers = {};
+    const correctAnswers = {
+      1: 'b',
+      2: 'c',
+      3: 'b',
+      4: 'c',
+      5: 'b',
+      6: 'c',
+      7: 'b',
+      8: 'd',
+      9: 'b',
+      10: 'c',
+      11: 'b',
+      12: 'c',
+      13: 'b',
+      14: 'd',
+      15: 'b',
+      16: 'b',
+      17: 'c',
+      18: 'c',
+      19: 'c',
+      20: 'b'
+    };
+
+    function showSection(sectionId) {
+      const sections = document.querySelectorAll('.section');
+      sections.forEach(section => {
+        section.classList.remove('active');
+      });
+      document.getElementById(sectionId).classList.add('active');
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    // Quiz functionality
+    document.querySelectorAll('.quiz-option').forEach(option => {
+      option.addEventListener('click', function() {
+        const question = this.dataset.question;
+        const answer = this.dataset.answer;
+        
+        // Remove selected class from other options in the same question
+        document.querySelectorAll(`[data-question="${question}"]`).forEach(opt => {
+          opt.classList.remove('selected');
+        });
+        
+        // Add selected class to clicked option
+        this.classList.add('selected');
+        selectedAnswers[question] = answer;
+      });
+    });
+
+    function submitQuiz() {
+      if (Object.keys(selectedAnswers).length < 20) {
+        const resultDiv = document.getElementById('quizResult');
+        const scoreText = document.getElementById('scoreText');
+        scoreText.textContent = 'Mohon jawab semua pertanyaan terlebih dahulu!';
+        scoreText.style.color = '#f44336';
+        resultDiv.classList.add('show');
+        return;
+      }
+
+      let score = 0;
+      
+      // Check answers and mark correct/incorrect
+      for (let question in correctAnswers) {
+        const options = document.querySelectorAll(`[data-question="${question}"]`);
+        options.forEach(option => {
+          const answer = option.dataset.answer;
+          if (answer === correctAnswers[question]) {
+            option.classList.add('correct');
+          } else if (answer === selectedAnswers[question]) {
+            option.classList.add('incorrect');
+          }
+        });
+        
+        if (selectedAnswers[question] === correctAnswers[question]) {
+          score++;
+        }
+      }
+
+      // Display result
+      const resultDiv = document.getElementById('quizResult');
+      const scoreText = document.getElementById('scoreText');
+      const percentage = (score / 20) * 100;
+      
+      scoreText.textContent = `Skor Anda: ${score}/20 (${percentage}%)`;
+      scoreText.style.color = percentage >= 60 ? '#4caf50' : '#f44336';
+      resultDiv.classList.add('show');
+      
+      // Disable submit button
+      document.querySelector('.quiz-submit').disabled = true;
+    }
+
+    function resetQuiz() {
+      selectedAnswers = {};
+      
+      // Remove all classes
+      document.querySelectorAll('.quiz-option').forEach(option => {
+        option.classList.remove('selected', 'correct', 'incorrect');
+      });
+      
+      // Hide result
+      document.getElementById('quizResult').classList.remove('show');
+      
+      // Enable submit button
+      document.querySelector('.quiz-submit').disabled = false;
+      
+      // Scroll to top of quiz
+      document.getElementById('quiz').scrollIntoView({ behavior: 'smooth' });
+    }
+
+    async function onConfigChange(config) {
+      document.getElementById('siteTitle').textContent = config.site_title || defaultConfig.site_title;
+      document.getElementById('welcomeText').textContent = config.welcome_text || defaultConfig.welcome_text;
+      document.getElementById('hardwareTitle').textContent = config.hardware_title || defaultConfig.hardware_title;
+      document.getElementById('softwareTitle').textContent = config.software_title || defaultConfig.software_title;
+      document.getElementById('brainwareTitle').textContent = config.brainware_title || defaultConfig.brainware_title;
+      document.getElementById('osTitle').textContent = config.os_title || defaultConfig.os_title;
+      document.getElementById('mechanismTitle').textContent = config.mechanism_title || defaultConfig.mechanism_title;
+      document.getElementById('interactionTitle').textContent = config.interaction_title || defaultConfig.interaction_title;
+      document.getElementById('footerText').textContent = config.footer_text || defaultConfig.footer_text;
+    }
+
+    function mapToCapabilities(config) {
+      return {
+        recolorables: [],
+        borderables: [],
+        fontEditable: undefined,
+        fontSizeable: undefined
+      };
+    }
+
+    function mapToEditPanelValues(config) {
+      return new Map([
+        ["site_title", config.site_title || defaultConfig.site_title],
+        ["welcome_text", config.welcome_text || defaultConfig.welcome_text],
+        ["hardware_title", config.hardware_title || defaultConfig.hardware_title],
+        ["software_title", config.software_title || defaultConfig.software_title],
+        ["brainware_title", config.brainware_title || defaultConfig.brainware_title],
+        ["os_title", config.os_title || defaultConfig.os_title],
+        ["mechanism_title", config.mechanism_title || defaultConfig.mechanism_title],
+        ["interaction_title", config.interaction_title || defaultConfig.interaction_title],
+        ["footer_text", config.footer_text || defaultConfig.footer_text]
+      ]);
+    }
+
+    if (window.elementSdk) {
+      window.elementSdk.init({
+        defaultConfig,
+        onConfigChange,
+        mapToCapabilities,
+        mapToEditPanelValues
+      });
+    }
+  </script>
+  </div>
+ </body>
+</html>
